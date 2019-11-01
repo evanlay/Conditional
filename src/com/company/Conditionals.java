@@ -57,18 +57,27 @@ public class Conditionals {
             return false;
         }
     }
-    public static boolean isLater(int month1, int day1, int year1, int month2, int day2, int year2){
-        if (isLeapYear(year1) == true && isLeapYear(year2) ==true) {
-            if (year1 > year2){
+    public static boolean isLater(int month1, int day1, int year1, int month2, int day2, int year2) {
+        if (year1 < year2) {
+            return false;
+        }
+        else if (year1 == year2) {
+            if (month1 < month2) {
+                return false;
+            } else {
                 return true;
             }
-            else if (month1 > month2) {
-                return true
-            }
-        else if (month1 > month2) {
-            return true
         }
-        else if ()
+        else if (year1 == year2) {
+            if (month1 == month2) {
+                if (day1 < day2) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        }
         return false;
     }
     public static Color bestMatch(int r, int g, int b){
