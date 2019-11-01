@@ -61,24 +61,21 @@ public class Conditionals {
         if (year1 < year2) {
             return false;
         }
-        else if (year1 == year2) {
-            if (month1 < month2) {
-                return false;
-            } else {
-                return true;
-            }
+        else if (year1 > year2) {
+            return true;
         }
-        else if (year1 == year2) {
-            if (month1 == month2) {
-                if (day1 < day2) {
-                    return false;
-                }
-                else {
-                    return true;
-                }
-            }
+        else if (month1 < month2) {
+            return false;
         }
-        return false;
+        else if (month1 > month2) {
+            return true;
+        }
+        else if (day1 > day2) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
     public static Color bestMatch(int r, int g, int b){
         return Color.blue;
