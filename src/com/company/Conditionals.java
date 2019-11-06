@@ -70,11 +70,14 @@ public class Conditionals {
         else if (month1 > month2) {
             return true;
         }
-        else if (day1 > day2) {
+        else if (day1 < day2) {
             return false;
         }
-        else {
+        else if (day1 > day2) {
             return true;
+        }
+        else {
+            return false;
         }
     }
     public static Color bestMatch(int r, int g, int b){
@@ -84,3 +87,31 @@ public class Conditionals {
         return 0;
     }
 }
+/*
+Wages for 45 hours at $12.50 593.75
+Wages for 30 hours at $10.00 300.0
+2000 true
+2004 true
+2003 false
+2100 false
+1/2/2010 is later than 1/2/2011 false
+1/2/2011 is later than 1/2/2010 true
+1/2/2010 is later than 3/2/2010 false
+3/2/2010 is later than 1/2/2010 true
+1/3/2010 is later than 1/2/2010 true
+1/2/2010 is later than 1/3/2011 false
+1/2/2010 is later than 1/2/2010 false
+Best match 2 3 4 java.awt.Color[r=0,g=0,b=255]
+Best match 4 3 3 java.awt.Color[r=0,g=0,b=255]
+Best match 3 8 4 java.awt.Color[r=0,g=0,b=255]
+Best match 4 3 4 java.awt.Color[r=0,g=0,b=255]
+Best match 2 4 4 java.awt.Color[r=0,g=0,b=255]
+Best match 8 8 4 java.awt.Color[r=0,g=0,b=255]
+Best match 4 4 4 java.awt.Color[r=0,g=0,b=255]
+Find Best fit 2 3 6 is 0
+Find Best fit 4 3 6 is 0
+Find Best fit 3 4 6 is 0
+Find Best fit 2 3 1 is 0
+Find Best fit 6 3 4 is 0
+Find Best fit 3 6 4 is 0
+ */
